@@ -1,6 +1,6 @@
 <template>
 	<div class="page">
-		<base-header />
+		<firstscreen-page />
 		<router-view class="page__main" />
 		<base-footer />
 	</div>
@@ -8,7 +8,7 @@
 
 <script setup>
 import { RouterView } from 'vue-router';
-import BaseHeader from './components/BaseHeader.vue';
+import FirstscreenPage from './components/FirstscreenPage.vue';
 import BaseFooter from './components/BaseFooter.vue';
 </script>
 

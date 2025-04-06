@@ -1,8 +1,49 @@
+html {
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 1.2;
+	font-family: 'Europe', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+	-webkit-tap-highlight-color: transparent;
+}
+
 body {
 	margin: 0;
+
+	--icon-search: url('../icons/icon-search.svg');
+}
+
+.visually-hidden {
+	position: fixed;
+	transform: scale(0);
 }
 
 img {
 	max-width: 100%;
 	height: auto;
+}
+
+.container {
+	box-sizing: border-box;
+	width: 100%;
+	max-width: 1440px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+
+p {
+	margin: 0;
+}
+
+h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6 {
+	margin: 0;
 }

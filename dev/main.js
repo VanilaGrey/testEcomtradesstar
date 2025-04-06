@@ -1,5 +1,6 @@
 import loadPixelperfect from 'pixelperfect-tool';
 
 loadPixelperfect({
-	// https://www.npmjs.com/package/pixelperfect-tool#настройки
+	breakpoints: [375, 768, 1440],
+	folder: 'images/pixelperfect',
 });

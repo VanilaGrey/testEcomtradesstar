@@ -1,6 +1,6 @@
 <script setup>
-import { defineProps, computed } from "vue";
-import ButtonItem from "./UButton.vue";
+import { defineProps, computed } from 'vue';
+import ButtonItem from './UButton.vue';
 
 const props = defineProps({
 	showButton: {
@@ -9,7 +9,7 @@ const props = defineProps({
 	},
 	backgroundImage: {
 		type: String,
-		default: "/images/foto-1.jpg",
+		default: '/images/foto-1.jpg',
 	},
 	showMeta: {
 		type: Boolean,
@@ -21,14 +21,14 @@ const props = defineProps({
 	},
 	layout: {
 		type: String,
-		default: "default",
+		default: 'default',
 	},
 });
 
 const layoutClass = computed(() => {
-	return props.layout === "second"
-		? "firstscreen__text--second"
-		: "firstscreen__text--default";
+	return props.layout === 'second'
+		? 'firstscreen__text--second'
+		: 'firstscreen__text--default';
 });
 </script>
 
@@ -112,7 +112,7 @@ const layoutClass = computed(() => {
 	}
 
 	&::before {
-		content: "";
+		content: '';
 		position: absolute;
 		top: 0;
 		left: 0;

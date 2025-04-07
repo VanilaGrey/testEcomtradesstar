@@ -56,6 +56,7 @@ import destinationsItems from '@/data/destinations-items.js';
 		background-position: center;
 		background-size: cover;
 		cursor: pointer;
+		background-color: grey;
 	}
 
 	&__card-title {

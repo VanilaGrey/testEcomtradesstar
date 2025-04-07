@@ -20,7 +20,7 @@ import ButtonItem from './UButton.vue';
 .firstscreen {
 	position: relative;
 	margin-bottom: 20px;
-	background-image: url('/images/foto-1.jpg');
+	background-image: url("/images/foto-1.jpg");
 	background-position: center;
 	background-size: cover;
 
@@ -57,7 +57,7 @@ import ButtonItem from './UButton.vue';
 	}
 
 	&::before {
-		content: '';
+		content: "";
 		position: absolute;
 		top: 0;
 		left: 0;

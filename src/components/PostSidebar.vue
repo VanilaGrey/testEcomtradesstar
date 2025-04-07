@@ -1,5 +1,8 @@
 <script setup>
+import { useI18n } from 'vue-i18n';
 import postItems from '@/data/post-items.js';
+
+const { t } = useI18n();
 </script>
 
 <template>
@@ -11,8 +14,8 @@ import postItems from '@/data/post-items.js';
 		>
 			<img :src="post.image" alt="" class="post-sidebar__image" />
 			<div class="post-sidebar__content">
-				<h4 class="post-sidebar__title">{{ post.title }}</h4>
-				<p class="post-sidebar__date">{{ post.date }}</p>
+				<h4 class="post-sidebar__title">{{ t(post.titleKey) }}</h4>
+				<p class="post-sidebar__date">{{ t(post.dateKey) }}</p>
 			</div>
 		</div>
 	</aside>

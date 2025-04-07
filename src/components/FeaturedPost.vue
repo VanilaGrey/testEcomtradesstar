@@ -1,5 +1,8 @@
 <script setup>
 import PostSidebar from './PostSidebar.vue';
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
 </script>
 
 <template>
@@ -11,16 +14,14 @@ import PostSidebar from './PostSidebar.vue';
 				alt="Destination"
 			/>
 			<div class="featured-post__content">
-				<p class="featured-post__date">1 Month Ago</p>
-				<h2 class="featured-post__title">
-					Tick one more destination off of your bucket list with one of our most
-					popular vacations in 2022
-				</h2>
+				<p class="featured-post__date">{{ t("bigPost.featured.date") }}</p>
+				<h2 class="featured-post__title">{{ t("bigPost.featured.title") }}</h2>
 				<p class="featured-post__description">
-					Phasellus aliquet nibh in iaculis pharetra. Maecenas eleifend sed ex.
-					Donec quis magna sed felis elementum blandit nec quis sem. Maecen.
+					{{ t("bigPost.featured.description") }}
 				</p>
-				<a href="#" class="featured-post__link">View Post</a>
+				<a href="#" class="featured-post__link">{{
+					t("bigPost.featured.viewPost")
+				}}</a>
 			</div>
 		</div>
 

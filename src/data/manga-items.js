@@ -1,20 +1,17 @@
 const mangaItems = [
 	{
-		title:
-			'Tick one more destination off of your bucket list with one of our most popular vacations in 2022',
-		date: '21 March 2021',
+		titleKey: 'mangaReads.manga1.title',
+		dateKey: 'mangaReads.manga1.date',
 		image: '/images/manga-foto-1.jpg',
 	},
 	{
-		title:
-			'Tick one more destination off of your bucket list with one of our most popular vacations in 2022',
-		date: '21 March 2021',
+		titleKey: 'mangaReads.manga2.title',
+		dateKey: 'mangaReads.manga2.date',
 		image: '/images/manga-foto-2.jpg',
 	},
 	{
-		title:
-			'Tick one more destination off of your bucket list with one of our most popular vacations in 2022',
-		date: '21 March 2021',
+		titleKey: 'mangaReads.manga3.title',
+		dateKey: 'mangaReads.manga3.date',
 		image: '/images/manga-foto-3.jpg',
 	},
 ];

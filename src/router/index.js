@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import IndexPage from '@/router/IndexPage.vue';
+import SecondPage from '@/router/SecondPage.vue';
 
 const routes = [
 	{
@@ -7,10 +8,17 @@ const routes = [
 		name: 'index',
 		component: IndexPage,
 	},
+	{
+		path: '/second',
+		name: 'second',
+		component: SecondPage,
+	},
 ];
+
 if (import.meta.env.DEV) {
 	routes.push({ path: '/pixelperfect' });
 }
+
 routes.push({
 	path: '/:catchAll(.*)',
 	redirect: '/',

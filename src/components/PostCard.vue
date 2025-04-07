@@ -18,7 +18,7 @@ import cardItems from '@/data/card-items.js';
 				<h2 class="cards__title">{{ post.title }}</h2>
 				<div class="cards__meta">
 					<span class="cards__author">{{ post.author }}</span>
-					<span class="cards__line">________</span>
+					<span class="cards__line">____</span>
 					<span class="cards__date">{{ post.date }}</span>
 					<span class="cards__dot">•</span>
 					<span class="cards__shares">{{ post.shares }}</span>
@@ -49,7 +49,7 @@ import cardItems from '@/data/card-items.js';
 	overflow: hidden;
 
 	&::before {
-		content: '';
+		content: "";
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -102,7 +102,7 @@ import cardItems from '@/data/card-items.js';
 
 .cards__author {
 	font-weight: 700;
-	font-size: 24px;
+	font-size: 22px;
 	color: #000000;
 }
 

@@ -1,13 +1,15 @@
 <script setup>
-defineProps(['post']);
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
 </script>
 
 <template>
 	<div class="post-item">
 		<img :src="post.image" alt="" class="post-item__image" />
 		<div class="post-item__content">
-			<h4 class="post-item__title">{{ post.title }}</h4>
-			<p class="post-item__date">{{ post.date }}</p>
+			<h4 class="post-item__title">{{ t(post.titleKey) }}</h4>
+			<p class="post-item__date">{{ t(post.dateKey) }}</p>
 		</div>
 	</div>
 </template>

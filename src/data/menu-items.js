@@ -1,9 +1,10 @@
 const menuItems = [
-	{ url: '#!', title: 'Destinations' },
-	{ url: '#!', title: 'Food' },
-	{ url: '#!', title: 'Well being' },
-	{ url: '#!', title: 'Sport' },
-	{ url: '#!', title: 'Family' },
-	{ url: '#!', title: 'Lifestyle' },
+	{ url: '/second', title: 'menu.destinations' },
+	{ url: '/second', title: 'menu.food' },
+	{ url: '/second', title: 'menu.wellBeing' },
+	{ url: '/second', title: 'menu.sport' },
+	{ url: '/second', title: 'menu.family' },
+	{ url: '/second', title: 'menu.lifestyle' },
 ];
+
 export default menuItems;

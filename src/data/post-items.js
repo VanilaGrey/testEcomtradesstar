@@ -1,23 +1,23 @@
 const postsItems = [
 	{
-		title: 'Akame Ga Kill: Season finale',
-		date: '21 March 2021',
+		titleKey: 'posts.post1.title',
+		dateKey: 'posts.post1.date',
 		image: '/images/foto-4.jpg',
 	},
 	{
-		title: 'Naruto Uzumaki: Hidden Village',
-		date: '21 March 2021',
+		titleKey: 'posts.post2.title',
+		dateKey: 'posts.post2.date',
 		image: '/images/foto-5.jpg',
 	},
 	{
-		title: 'Love juice Season Premiere',
-		date: '21 March 2021',
+		titleKey: 'posts.post3.title',
+		dateKey: 'posts.post3.date',
 		image: '/images/foto-6.jpg',
 	},
 	{
-		title: 'Love juice Season Premiere',
-		date: '21 March 2021',
-		image: '/images/foto-7.jpg',
+		titleKey: 'posts.post4.title',
+		dateKey: 'posts.post4.date',
+		image: '/foto-7.jpg',
 	},
 ];
 

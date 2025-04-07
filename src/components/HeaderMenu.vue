@@ -1,9 +1,8 @@
 <script setup>
-import { clickOutside as vClickOutside } from 'v-click-outside-vue3';
 import menuItems from '@/data/menu-items.js';
 </script>
 <template>
-	<nav class="menu" v-click-outside="setCategoryIndex">
+	<nav class="menu">
 		<ul class="menu__list">
 			<li class="menu__item" v-for="(item, index) in menuItems" :key="index">
 				<router-link class="menu__link" :to="item.url">

@@ -22,45 +22,45 @@ import destinationsItems from '@/data/destinations-items.js';
 	</section>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .destinations {
 	padding: 180px 0 130px;
-}
 
-.destinations__title {
-	font-weight: 700;
-	font-size: 32px;
-}
+	&__title {
+		font-weight: 700;
+		font-size: 32px;
+	}
 
-.destinations__subtitle {
-	font-weight: 700;
-	font-size: 16px;
-}
+	&__subtitle {
+		font-weight: 700;
+		font-size: 16px;
+	}
 
-.destinations__list {
-	display: grid;
-	justify-content: space-between;
-	grid-template-columns: repeat(5, 1fr);
-	margin-top: 30px;
-	gap: 40px;
-}
+	&__list {
+		display: grid;
+		justify-content: space-between;
+		grid-template-columns: repeat(5, 1fr);
+		margin-top: 30px;
+		gap: 40px;
+	}
 
-.destinations__card {
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: auto;
-	min-height: 260px;
-	padding: 10px;
-	color: white;
-	background-position: center;
-	background-size: cover;
-	cursor: pointer;
-}
+	&__card {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: auto;
+		min-height: 260px;
+		padding: 10px;
+		color: white;
+		background-position: center;
+		background-size: cover;
+		cursor: pointer;
+	}
 
-.destinations__card-title {
-	font-weight: 700;
-	font-style: 24px;
+	&__card-title {
+		font-weight: 700;
+		font-style: 24px;
+	}
 }
 </style>

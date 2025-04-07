@@ -1,17 +1,55 @@
 <script setup>
-import HeaderItems from './BaseHeader.vue';
-import ButtonItem from './UButton.vue';
+import { defineProps, computed } from "vue";
+import ButtonItem from "./UButton.vue";
+
+const props = defineProps({
+	showButton: {
+		type: Boolean,
+		default: true,
+	},
+	backgroundImage: {
+		type: String,
+		default: "/images/foto-1.jpg",
+	},
+	showMeta: {
+		type: Boolean,
+		default: false,
+	},
+	showBreadcrumb: {
+		type: Boolean,
+		default: false,
+	},
+	layout: {
+		type: String,
+		default: "default",
+	},
+});
+
+const layoutClass = computed(() => {
+	return props.layout === "second"
+		? "firstscreen__text--second"
+		: "firstscreen__text--default";
+});
 </script>
 
 <template>
-	<div class="firstscreen">
-		<HeaderItems />
-		<div class="firstscreen__text">
+	<div
+		class="firstscreen"
+		:style="{ backgroundImage: `url('${props.backgroundImage}')` }"
+	>
+		<div :class="['firstscreen__text', layoutClass]">
+			<div class="firstscreen__breadcrumb" v-if="props.showBreadcrumb">
+				Home &gt; Growth &gt;
+				<strong>5 Efficient Rules How to Organize Your Working Place</strong>
+			</div>
 			<p class="firstscreen__label">Inspiration for travel by real people</p>
 			<span class="firstscreen__discription">Book smart, travel simple</span>
-			<button-item class="firstscreen__button">
+			<button-item v-if="props.showButton" class="firstscreen__button">
 				Start planning your trip
 			</button-item>
+			<span class="firstscreen__meta" v-if="props.showMeta">
+				by Joanna Wellick · 2 minute read · 1.6K views · 1.2K shares
+			</span>
 		</div>
 	</div>
 </template>
@@ -20,24 +58,33 @@ import ButtonItem from './UButton.vue';
 .firstscreen {
 	position: relative;
 	margin-bottom: 20px;
-	background-image: url("/images/foto-1.jpg");
 	background-position: center;
 	background-size: cover;
 
-	&__text {
+	&__text--default {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 		min-height: 542px;
 		padding: 140px 95px 125px;
+		text-align: center;
+	}
+
+	&__text--second {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		align-items: flex-start;
+		min-height: 542px;
+		padding: 110px 95px 100px;
+		text-align: left;
 	}
 
 	&__label {
 		margin: 0;
 		font-weight: 700;
 		font-size: 64px;
-		text-align: center;
 		color: #ffffff;
 		text-transform: uppercase;
 	}
@@ -56,6 +103,14 @@ import ButtonItem from './UButton.vue';
 		border-radius: 2px;
 	}
 
+	&__meta {
+		padding: 20px;
+		font-size: 14px;
+		text-align: center;
+		color: #ffffff;
+		text-shadow: 0 0 3px #000000;
+	}
+
 	&::before {
 		content: "";
 		position: absolute;
@@ -65,6 +120,16 @@ import ButtonItem from './UButton.vue';
 		width: 100%;
 		height: 100%;
 		background-color: rgba(0, 0, 0, 0.39);
+	}
+
+	&__breadcrumb {
+		position: absolute;
+		top: 100px;
+		left: 10px;
+		padding: 20px 30px;
+		font-size: 14px;
+		color: #ffffff;
+		text-shadow: 0 0 3px #000000;
 	}
 }
 </style>

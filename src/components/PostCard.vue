@@ -1,30 +1,38 @@
 <script setup>
+import { useI18n } from 'vue-i18n';
 import cardItems from '@/data/card-items.js';
-</script>
+import IconButton from './UIconButton.vue';
 
+const { t } = useI18n();
+</script>
 <template>
 	<div class="cards">
 		<div v-for="(post, index) in cardItems" :key="index" class="cards__item">
-			<div class="cards__image-wrapper">
-				<img :src="post.image" alt="Post Image" class="cards__image" />
+			<div class="cards__wrapper">
+				<div
+					class="cards__image"
+					:style="{ backgroundImage: 'url(' + post.image + ')' }"
+				></div>
 				<div class="cards__tags">
-					<span v-for="(tag, i) in post.tags" :key="i" class="cards__tag">{{
-						tag
-					}}</span>
+					<span class="cards__tag">{{ t(`cards.${post.id}.tags1`) }}</span>
+					<span class="cards__tag">{{ t(`cards.${post.id}.tags2`) }}</span>
 				</div>
-				<img :src="post.icon" :alt="post.name" class="cards__icon" />
+				<icon-button class="cards__icon" :icon="post.icon" />
 			</div>
+
 			<div class="cards__content">
-				<h2 class="cards__title">{{ post.title }}</h2>
+				<h2 class="cards__title">{{ t(`cards.${post.id}.title`) }}</h2>
 				<div class="cards__meta">
-					<span class="cards__author">{{ post.author }}</span>
+					<span class="cards__author">{{ t(`cards.${post.id}.author`) }}</span>
 					<span class="cards__line">____</span>
-					<span class="cards__date">{{ post.date }}</span>
+					<span class="cards__date">{{ t(`cards.${post.id}.date`) }}</span>
 					<span class="cards__dot">•</span>
-					<span class="cards__shares">{{ post.shares }}</span>
+					<span class="cards__shares">{{ t(`cards.${post.id}.shares`) }}</span>
 				</div>
-				<p class="cards__description">{{ post.description }}</p>
-				<a href="#" class="cards__link">View Post</a>
+				<p class="cards__description">
+					{{ t(`cards.${post.id}.description`) }}
+				</p>
+				<a href="#" class="cards__link">{{ t("bigPost.featured.viewPost") }}</a>
 			</div>
 		</div>
 	</div>
@@ -36,125 +44,125 @@ import cardItems from '@/data/card-items.js';
 	grid-template-columns: repeat(3, 1fr);
 	gap: 40px;
 	padding: 0;
-}
 
-.cards__item {
-	display: flex;
-	flex-direction: column;
-	background-color: #ffffff;
-}
-
-.cards__image-wrapper {
-	position: relative;
-	overflow: hidden;
-
-	&::before {
-		content: "";
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background-color: rgba(0, 0, 0, 0.25);
+	&__item {
+		display: flex;
+		flex-direction: column;
+		background-color: #ffffff;
 	}
-}
 
-.cards__image {
-	display: block;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-}
+	&__wrapper {
+		position: relative;
+		overflow: hidden;
 
-.cards__tags {
-	position: absolute;
-	top: 30px;
-	left: 30px;
-	display: flex;
-	gap: 8px;
-}
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.25);
+		}
+	}
 
-.cards__tag {
-	padding: 8px 10px;
-	font-weight: 700;
-	font-size: 20px;
-	color: #ffffff;
-	background: rgba(255, 255, 255, 0.2);
-	border-radius: 4px;
-	backdrop-filter: blur(12px);
-}
+	&__image {
+		width: 100%; /* или нужная вам ширина */
+		min-height: 320px; /* или нужная вам высота */
+		background-position: center;
+		background-size: cover; /* или contain, в зависимости от ваших нужд */
+	}
 
-.cards__content {
-	display: flex;
-	flex-grow: 1;
-	flex-direction: column;
-	padding: 16px 0;
-}
+	&__tags {
+		position: absolute;
+		top: 30px;
+		left: 30px;
+		display: flex;
+		gap: 8px;
+	}
 
-.cards__icon {
-	position: absolute;
-	top: 30px;
-	right: 30px;
-	border-radius: 200px;
-	backdrop-filter: blur(12px);
-	fill: rgba(255, 255, 255, 0.2);
-}
+	&__tag {
+		padding: 8px 10px;
+		font-weight: 700;
+		font-size: 20px;
+		color: #ffffff;
+		background: rgba(255, 255, 255, 0.2);
+		border-radius: 4px;
+		backdrop-filter: blur(12px);
+	}
 
-.cards__author {
-	font-weight: 700;
-	font-size: 22px;
-	color: #000000;
-}
+	&__content {
+		display: flex;
+		flex-grow: 1;
+		flex-direction: column;
+		padding: 16px 0;
+	}
 
-.cards__title {
-	margin: 0 0 12px;
-	font-weight: 700;
-	font-size: 42px;
-}
+	&__icon {
+		position: absolute;
+		top: 30px;
+		right: 30px;
+		border-radius: 200px;
+		backdrop-filter: blur(12px);
+		fill: rgba(255, 255, 255, 0.2);
+	}
 
-.cards__meta {
-	display: flex;
-	align-items: center;
-	margin-bottom: 12px;
-	font-size: 13px;
-	color: #777777;
-	gap: 10px;
-}
+	&__author {
+		font-weight: 700;
+		font-size: 22px;
+		color: #000000;
+	}
 
-.cards__dot {
-	color: #bbbbbb;
-}
+	&__title {
+		margin: 0 0 12px;
+		font-weight: 700;
+		font-size: 42px;
+	}
 
-.cards__line {
-	position: relative;
-	top: -25%;
-	color: #bbbbbb;
-}
+	&__meta {
+		display: flex;
+		align-items: center;
+		margin-bottom: 12px;
+		font-size: 13px;
+		color: #777777;
+		gap: 10px;
+	}
 
-.cards__description {
-	flex-grow: 1;
-	margin-bottom: 16px;
-	line-height: 150%;
-	color: #555555;
-}
+	&__dot {
+		color: #bbbbbb;
+	}
 
-.cards__link {
-	align-self: flex-start;
-	padding-bottom: 5px;
-	font-weight: bold;
-	font-size: 14px;
-	color: #000000;
-	text-decoration: none;
-	border-bottom: 1px solid black;
-}
+	&__line {
+		position: relative;
+		top: -25%;
+		color: #bbbbbb;
+	}
 
-.cards__date {
-	font-weight: 400;
-	font-size: 18px;
-}
+	&__description {
+		flex-grow: 1;
+		margin-bottom: 16px;
+		line-height: 150%;
+		color: #555555;
+	}
 
-.cards__shares {
-	font-weight: 400;
-	font-size: 18px;
+	&__link {
+		align-self: flex-start;
+		padding-bottom: 5px;
+		font-weight: bold;
+		font-size: 14px;
+		color: #000000;
+		text-decoration: none;
+		border-bottom: 1px solid black;
+	}
+
+	&__date {
+		font-weight: 400;
+		font-size: 18px;
+	}
+
+	&__shares {
+		font-weight: 400;
+		font-size: 18px;
+	}
 }
 </style>

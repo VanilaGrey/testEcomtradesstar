@@ -5,7 +5,7 @@ defineProps({
 		required: true,
 	},
 	count: {
-		type: Number,
+		type: [Number, String],
 		default: null,
 	},
 });

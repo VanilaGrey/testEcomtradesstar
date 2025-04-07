@@ -21,19 +21,21 @@ const { t } = useI18n();
 	</aside>
 </template>
 
-<style scoped>
-.post-sidebar__item {
-	display: flex;
-	gap: 15px;
-}
+<style lang="scss" scoped>
+.post-sidebar {
+	&__item {
+		display: flex;
+		gap: 15px;
+	}
 
-.post-sidebar__title {
-	font-weight: bold;
-	font-size: 14px;
-}
+	&__title {
+		font-weight: bold;
+		font-size: 14px;
+	}
 
-.post-sidebar__date {
-	font-size: 13px;
-	color: gray;
+	&__date {
+		font-size: 13px;
+		color: gray;
+	}
 }
 </style>

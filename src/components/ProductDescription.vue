@@ -54,98 +54,98 @@ import { useI18n } from 'vue-i18n';
 const { t } = useI18n();
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .product {
 	display: flex;
 	flex-direction: row;
-	gap: 2rem;
 	padding: 2rem;
-	font-family: "Helvetica Neue", sans-serif;
-	color: #222;
 	line-height: 1.6;
-}
+	font-family: 'Helvetica Neue', sans-serif;
+	color: #222222;
+	gap: 2rem;
 
-.product__stats {
-	min-width: 100px;
-	display: flex;
-	flex-direction: column;
-	gap: 1rem;
-	font-size: 0.85rem;
-	color: #666;
-}
+	&__stats {
+		display: flex;
+		flex-direction: column;
+		min-width: 100px;
+		font-size: 0.85rem;
+		color: #666666;
+		gap: 1rem;
+	}
 
-.product__stat {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
+	&__stat {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
 
-.product__icon {
-	font-size: 1.2rem;
-}
+	&__icon {
+		font-size: 1.2rem;
+	}
 
-.product__value {
-	font-weight: bold;
-}
+	&__value {
+		font-weight: bold;
+	}
 
-.product__label {
-	font-size: 0.75rem;
-	color: #999;
-}
+	&__label {
+		font-size: 0.75rem;
+		color: #999999;
+	}
 
-.product__link {
-	color: #0070f3;
-	cursor: pointer;
-	font-weight: 600;
-}
+	&__link {
+		font-weight: 600;
+		color: #0070f3;
+		cursor: pointer;
+	}
 
-.product__socials {
-	display: flex;
-	flex-direction: column;
-	gap: 0.25rem;
-	font-size: 0.85rem;
-}
+	&__socials {
+		display: flex;
+		flex-direction: column;
+		gap: 0.25rem;
+		font-size: 0.85rem;
+	}
 
-.product__social {
-	display: flex;
-	align-items: center;
-	gap: 0.25rem;
-}
+	&__social {
+		display: flex;
+		align-items: center;
+		gap: 0.25rem;
+	}
 
-.product__content {
-	max-width: 700px;
-}
+	&__content {
+		max-width: 700px;
+	}
 
-.product__paragraph {
-	margin-bottom: 1rem;
-	font-size: 1rem;
-}
+	&__paragraph {
+		margin-bottom: 1rem;
+		font-size: 1rem;
+	}
 
-.product__quote {
-	font-weight: bold;
-	font-size: 1.3rem;
-	margin: 2rem 0 1.5rem;
-	padding-left: 1.2rem;
-	border-left: 5px solid #ccc;
-	line-height: 1.5;
-}
+	&__quote {
+		margin: 2rem 0 1.5rem;
+		padding-left: 1.2rem;
+		font-weight: bold;
+		font-size: 1.3rem;
+		line-height: 1.5;
+		border-left: 5px solid #cccccc;
+	}
 
-.product__section {
-	margin-top: 2rem;
-}
+	&__section {
+		margin-top: 2rem;
+	}
 
-.product__title {
-	font-size: 1.1rem;
-	font-weight: 700;
-	margin-bottom: 0.5rem;
-}
+	&__title {
+		margin-bottom: 0.5rem;
+		font-weight: 700;
+		font-size: 1.1rem;
+	}
 
-.product__list {
-	padding-left: 1.5rem;
-	list-style: disc;
-}
+	&__list {
+		padding-left: 1.5rem;
+		list-style: disc;
+	}
 
-.product__list-item {
-	margin-bottom: 0.5rem;
+	&__list-item {
+		margin-bottom: 0.5rem;
+	}
 }
 </style>

@@ -1,6 +1,6 @@
 <script setup>
 import { useI18n } from 'vue-i18n';
-
+defineProps(['post']);
 const { t } = useI18n();
 </script>
 
@@ -15,15 +15,17 @@ const { t } = useI18n();
 </template>
 
 <style lang="scss" scoped>
-.post-item__title {
-	margin-bottom: 20px;
-	font-weight: 700;
-	font-size: 18px;
-}
+.post-item {
+	&__title {
+		margin-bottom: 20px;
+		font-weight: 700;
+		font-size: 18px;
+	}
 
-.post-item__date {
-	font-weight: 400;
-	font-size: 12px;
-	color: #121416;
+	&__date {
+		font-weight: 400;
+		font-size: 12px;
+		color: #121416;
+	}
 }
 </style>

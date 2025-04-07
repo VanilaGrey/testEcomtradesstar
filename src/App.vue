@@ -1,6 +1,5 @@
 <template>
 	<div class="page">
-		<!-- Языковой переключатель -->
 		<div class="page__lang-switcher">
 			<button
 				v-for="lng in availableLocales"
@@ -11,8 +10,7 @@
 				{{ lng.toUpperCase() }}
 			</button>
 		</div>
-
-		<firstscreen-page />
+		<base-header />
 		<router-view class="page__main" />
 		<base-footer />
 	</div>
@@ -21,8 +19,7 @@
 <script setup>
 import { useI18n } from 'vue-i18n';
 import { RouterView } from 'vue-router';
-// import BaseHeader from './components/BaseHeader.vue'
-import FirstscreenPage from './components/FirstscreenPage.vue';
+import BaseHeader from './components/BaseHeader.vue';
 import BaseFooter from './components/BaseFooter.vue';
 
 const { locale, availableLocales } = useI18n();
@@ -48,14 +45,14 @@ const { locale, availableLocales } = useI18n();
 
 	button {
 		padding: 0.4rem 0.8rem;
-		border: 1px solid #ccc;
 		background-color: white;
-		cursor: pointer;
+		border: 1px solid #cccccc;
 		border-radius: 4px;
+		cursor: pointer;
 
 		&.active {
-			background-color: #0070f3;
 			color: white;
+			background-color: #0070f3;
 			border-color: #0070f3;
 		}
 	}

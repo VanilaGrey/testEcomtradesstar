@@ -18,7 +18,7 @@ defineProps({
 });
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .social-icon {
 	display: flex;
 	flex-direction: column;
@@ -26,19 +26,19 @@ defineProps({
 	gap: 10px;
 	margin-top: -20px;
 	cursor: pointer;
-}
 
-.social-icon__image {
-	width: 15px;
-	height: 15px;
-	padding: 1px;
-	background-color: grey;
-	border-radius: 50%;
-}
+	&__image {
+		width: 15px;
+		height: 15px;
+		padding: 1px;
+		background-color: grey;
+		border-radius: 50%;
+	}
 
-.social-icon__count {
-	font-weight: 700;
-	font-size: 14px;
-	color: grey;
+	&__count {
+		font-weight: 700;
+		font-size: 14px;
+		color: grey;
+	}
 }
 </style>

@@ -22,19 +22,19 @@ import socialItems from '@/data/social-items.js';
 	align-items: center;
 	padding: 20px 0;
 	gap: 16px;
-}
 
-.social-stats__item {
-	display: flex;
-	align-items: center;
-	gap: 6px;
-	font-size: 14px;
-	color: #000000;
-}
+	&__item {
+		display: flex;
+		align-items: center;
+		gap: 6px;
+		font-size: 14px;
+		color: #000000;
+	}
 
-.social-stats__icon {
-	width: 18px;
-	height: 18px;
-	object-fit: contain;
+	&__icon {
+		width: 18px;
+		height: 18px;
+		object-fit: contain;
+	}
 }
 </style>

@@ -20,20 +20,20 @@ const { t } = useI18n();
 	</section>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .manga-reads {
 	padding: 15px 40px 30px;
 	border: 1px solid #d6d6d6;
-}
 
-.manga-reads__list {
-	display: flex;
-	flex-direction: column;
-	gap: 45px;
-}
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: 45px;
+	}
 
-.manga-reads__item {
-	display: flex;
-	gap: 25px;
+	&__item {
+		display: flex;
+		gap: 25px;
+	}
 }
 </style>

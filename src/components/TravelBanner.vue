@@ -20,7 +20,7 @@ import ButtonItem from './UButton.vue';
 	</section>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .banner {
 	position: relative;
 	display: flex;
@@ -31,53 +31,53 @@ import ButtonItem from './UButton.vue';
 	background-image: url('/images/foto-2.jpg');
 	background-position: center;
 	background-size: cover;
-}
 
-.banner__content {
-	position: relative;
-	z-index: 1;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	max-width: 720px;
-	padding: 150px 20px;
-}
+	&__content {
+		position: relative;
+		z-index: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		max-width: 720px;
+		padding: 150px 20px;
+	}
 
-.banner__tag {
-	padding: 8px 10px;
-	font-weight: 700;
-	font-size: 20px;
-	color: #ffffff;
-	background: rgba(255, 255, 255, 0.2);
-	border-radius: 4px;
-	backdrop-filter: blur(12px);
-}
+	&__tag {
+		padding: 8px 10px;
+		font-weight: 700;
+		font-size: 20px;
+		color: #ffffff;
+		background: rgba(255, 255, 255, 0.2);
+		border-radius: 4px;
+		backdrop-filter: blur(12px);
+	}
 
-.banner__title {
-	margin-bottom: 16px;
-	font-weight: bold;
-	font-size: 32px;
-}
+	&__title {
+		margin-bottom: 16px;
+		font-weight: bold;
+		font-size: 32px;
+	}
 
-.banner__text {
-	max-width: 520px;
-	margin: 0;
-	margin-bottom: 24px;
-	font-size: 16px;
-	color: #dddddd;
-}
+	&__text {
+		max-width: 520px;
+		margin: 0;
+		margin-bottom: 24px;
+		font-size: 16px;
+		color: #dddddd;
+	}
 
-.banner__button {
-	max-width: 320px;
-	margin-top: 40px;
-	color: #000000;
-	text-transform: none;
-	background-color: #ffffff;
-	border-radius: 2px;
-}
+	&__button {
+		max-width: 320px;
+		margin-top: 40px;
+		color: #000000;
+		text-transform: none;
+		background-color: #ffffff;
+		border-radius: 2px;
 
-.banner__button:hover {
-	color: #5e45d6;
+		&:hover {
+			color: #5e45d6;
+		}
+	}
 }
 </style>

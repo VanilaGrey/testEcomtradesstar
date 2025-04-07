@@ -17,7 +17,7 @@ const postsItems = [
 	{
 		titleKey: 'posts.post4.title',
 		dateKey: 'posts.post4.date',
-		image: '/foto-7.jpg',
+		image: '/images/foto-7.jpg',
 	},
 ];
 

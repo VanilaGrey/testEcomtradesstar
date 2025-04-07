@@ -14,51 +14,61 @@ import IconButton from './UIconButton.vue';
 			<icon-button
 				class="footer__icon"
 				icon="facebook"
-				count="45"
+				:count="29"
 			></icon-button>
-			<icon-button class="footer__icon" icon="twitter" count="29"></icon-button>
 			<icon-button
 				class="footer__icon"
-				icon="instagram"
-				count="29"
+				icon="twitter"
+				:count="'70К'"
 			></icon-button>
-			<icon-button class="footer__icon" icon="twitter" count="29"></icon-button>
-			<icon-button class="footer__icon" icon="youtube" count="29"></icon-button>
+			<icon-button class="footer__icon" icon="instagram" :count="40"
+				><span>29</span></icon-button
+			>
+			<icon-button
+				class="footer__icon"
+				icon="twitter"
+				:count="'13К'"
+			></icon-button>
+			<icon-button
+				class="footer__icon"
+				icon="youtube"
+				:count="'168К'"
+			></icon-button>
 		</div>
 	</footer>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .footer {
 	display: flex;
 	justify-content: space-between;
 	padding: 40px;
 	color: white;
 	background: #111111;
-}
 
-.footer__socials {
-	display: flex;
-	gap: 30px;
-}
+	&__socials {
+		display: flex;
+		gap: 30px;
+	}
 
-.footer__title {
-	margin-right: 15px;
-}
+	&__title {
+		margin-right: 15px;
+	}
 
-.footer__company {
-	margin-left: 15px;
-}
+	&__company {
+		margin-left: 15px;
+	}
 
-.footer__icon {
-	color: grey;
-}
+	&__icon {
+		color: grey;
 
-.footer__icon::before {
-	width: 20px;
-	height: 20px;
-	background-color: grey;
-	mask-position: center;
-	mask-size: auto;
+		&::before {
+			width: 20px;
+			height: 20px;
+			background-color: grey;
+			mask-position: center;
+			mask-size: auto;
+		}
+	}
 }
 </style>

@@ -27,13 +27,18 @@ import IconButton from './UIconButton.vue';
 <style lang="scss" scoped>
 .header {
 	display: flex;
+	flex-direction: column;
 	justify-content: space-between;
 
 	&__inner {
+		position: absolute;
+		right: 0;
+		left: 0;
+		z-index: 2;
 		display: grid;
 		align-items: center;
 		grid-template-columns: 360px 1fr 280px;
-		width: 100%;
+		width: auto;
 		margin: 40px 40px 0;
 	}
 

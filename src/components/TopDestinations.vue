@@ -1,5 +1,5 @@
 <script setup>
-import destinationsItems from '@/data/destinations-items.js';
+import destinationsItems from "@/data/destinations-items.js";
 </script>
 
 <template>
@@ -14,7 +14,7 @@ import destinationsItems from '@/data/destinations-items.js';
 				v-for="(destination, index) in destinationsItems"
 				:key="index"
 				class="destinations__card"
-				:style="{ backgroundImage: `url(${destination.image})` }"
+				:style="{'--background-image': `url(${destination.image})`}"
 			>
 				<span class="destinations__card-title">{{ destination.title }}</span>
 			</div>
@@ -57,6 +57,9 @@ import destinationsItems from '@/data/destinations-items.js';
 		background-size: cover;
 		cursor: pointer;
 		background-color: grey;
+		background-image: var(--background-image);
+		background-position: center;
+		background-size: cover;
 	}
 
 	&__card-title {

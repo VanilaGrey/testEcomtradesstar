@@ -14,7 +14,7 @@ import destinationsItems from "@/data/destinations-items.js";
 				v-for="(destination, index) in destinationsItems"
 				:key="index"
 				class="destinations__card"
-				:style="{'--background-image': `url(${destination.image})`}"
+				:style="{ '--background-image': `url(${destination.image})` }"
 			>
 				<span class="destinations__card-title">{{ destination.title }}</span>
 			</div>
@@ -53,13 +53,11 @@ import destinationsItems from "@/data/destinations-items.js";
 		min-height: 260px;
 		padding: 10px;
 		color: white;
-		background-position: center;
-		background-size: cover;
-		cursor: pointer;
 		background-color: grey;
 		background-image: var(--background-image);
 		background-position: center;
 		background-size: cover;
+		cursor: pointer;
 	}
 
 	&__card-title {

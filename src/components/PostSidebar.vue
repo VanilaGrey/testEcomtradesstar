@@ -1,6 +1,6 @@
 <script setup>
-import { useI18n } from 'vue-i18n';
-import postItems from '@/data/post-items.js';
+import { useI18n } from "vue-i18n";
+import postItems from "@/data/post-items.js";
 
 const { t } = useI18n();
 </script>
@@ -12,7 +12,10 @@ const { t } = useI18n();
 			:key="index"
 			class="post-sidebar__item"
 		>
-			<img :src="post.image" alt="" class="post-sidebar__image" />
+			<div
+				class="post-sidebar__image"
+				:style="{ '--background-image': `url(${post.image})` }"
+			></div>
 			<div class="post-sidebar__content">
 				<h4 class="post-sidebar__title">{{ t(post.titleKey) }}</h4>
 				<p class="post-sidebar__date">{{ t(post.dateKey) }}</p>
@@ -23,6 +26,13 @@ const { t } = useI18n();
 
 <style lang="scss" scoped>
 .post-sidebar {
+	&__image {
+		background-image: var(--background-image);
+		background-size: cover;
+		min-width: 144px;
+		min-height: 100px;
+	}
+
 	&__item {
 		display: flex;
 		gap: 15px;

@@ -1,5 +1,6 @@
 <script setup>
-import socialItems from '@/data/social-items.js';
+import socialItems from "@/data/social-items.js";
+import IconButton from "./UIconButton.vue";
 </script>
 
 <template>
@@ -9,7 +10,8 @@ import socialItems from '@/data/social-items.js';
 			:key="index"
 			class="social-stats__item"
 		>
-			<img :src="item.icon" :alt="item.name" class="social-stats__icon" />
+			<icon-button class="social-stats__icon" :icon="item.icon" />
+
 			<span class="social-stats__count">{{ item.count }}</span>
 		</div>
 	</div>
@@ -32,9 +34,14 @@ import socialItems from '@/data/social-items.js';
 	}
 
 	&__icon {
-		width: 18px;
-		height: 18px;
-		object-fit: contain;
+		width: 30px;
+		height: 25px;
+		&::before {
+			width: 25px;
+			height: 18px;
+			background-color: black;
+			mask-size: auto;
+		}
 	}
 }
 </style>

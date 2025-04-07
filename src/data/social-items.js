@@ -1,23 +1,23 @@
 const socialItems = [
 	{
-		name: 'facebook',
-		icon: '/src/assets/icons/icon-facebook.svg',
-		count: '3.7M',
+		name: "facebook",
+		icon: "facebook",
+		count: "3.7M",
 	},
 	{
-		name: 'instagram',
-		icon: '/src/assets/icons/icon-instagram.svg',
-		count: '2.4M',
+		name: "instagram",
+		icon: "instagram",
+		count: "2.4M",
 	},
 	{
-		name: 'twitter',
-		icon: '/src/assets/icons/icon-twitter.svg',
-		count: '3.7M',
+		name: "twitter",
+		icon: "twitter",
+		count: "3.7M",
 	},
 	{
-		name: 'youtube',
-		icon: '/src/assets/icons/icon-youtube.svg',
-		count: '2.4M',
+		name: "youtube",
+		icon: "youtube",
+		count: "2.4M",
 	},
 ];
 

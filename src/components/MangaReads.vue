@@ -1,7 +1,7 @@
 <script setup>
-import PostItem from './PostItem.vue';
-import mangaItems from '@/data/manga-items.js';
-import { useI18n } from 'vue-i18n';
+import PostItem from "./PostItem.vue";
+import mangaItems from "@/data/manga-items.js";
+import { useI18n } from "vue-i18n";
 
 const { t } = useI18n();
 </script>
@@ -24,6 +24,7 @@ const { t } = useI18n();
 .manga-reads {
 	padding: 15px 40px 30px;
 	border: 1px solid #d6d6d6;
+	max-width: 700px;
 
 	&__list {
 		display: flex;

@@ -1,6 +1,6 @@
 <script setup>
-import { defineProps, computed } from 'vue';
-import ButtonItem from './UButton.vue';
+import { defineProps, computed } from "vue";
+import ButtonItem from "./UButton.vue";
 
 const props = defineProps({
 	showButton: {
@@ -9,7 +9,7 @@ const props = defineProps({
 	},
 	backgroundImage: {
 		type: String,
-		default: '/images/foto-1.jpg',
+		default: "../images/foto-1.jpg",
 	},
 	showMeta: {
 		type: Boolean,
@@ -21,21 +21,22 @@ const props = defineProps({
 	},
 	layout: {
 		type: String,
-		default: 'default',
+		default: "default",
 	},
 });
 
 const layoutClass = computed(() => {
-	return props.layout === 'second'
-		? 'firstscreen__text--second'
-		: 'firstscreen__text--default';
+	return props.layout === "second"
+		? "firstscreen__text--second"
+		: "firstscreen__text--default";
 });
 </script>
+h
 
 <template>
 	<div
 		class="firstscreen"
-		:style="{ backgroundImage: `url('${props.backgroundImage}')` }"
+		:style="{ '--background-image': `url(${props.backgroundImage})` }"
 	>
 		<div :class="['firstscreen__text', layoutClass]">
 			<div class="firstscreen__breadcrumb" v-if="props.showBreadcrumb">
@@ -60,6 +61,7 @@ const layoutClass = computed(() => {
 	margin-bottom: 20px;
 	background-position: center;
 	background-size: cover;
+	background-image: var(--background-image);
 
 	&__text--default {
 		display: flex;
@@ -112,7 +114,7 @@ const layoutClass = computed(() => {
 	}
 
 	&::before {
-		content: '';
+		content: "";
 		position: absolute;
 		top: 0;
 		left: 0;

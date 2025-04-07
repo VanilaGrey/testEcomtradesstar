@@ -1,7 +1,7 @@
 <script setup>
-import { useI18n } from 'vue-i18n';
-import cardItems from '@/data/card-items.js';
-import IconButton from './UIconButton.vue';
+import { useI18n } from "vue-i18n";
+import cardItems from "@/data/card-items.js";
+import IconButton from "./UIconButton.vue";
 
 const { t } = useI18n();
 </script>
@@ -11,7 +11,7 @@ const { t } = useI18n();
 			<div class="cards__wrapper">
 				<div
 					class="cards__image"
-					:style="{ backgroundImage: 'url(' + post.image + ')' }"
+					:style="{ '--background-image': `url(${post.image})` }"
 				></div>
 				<div class="cards__tags">
 					<span class="cards__tag">{{ t(`cards.${post.id}.tags1`) }}</span>
@@ -27,6 +27,10 @@ const { t } = useI18n();
 					<span class="cards__line">____</span>
 					<span class="cards__date">{{ t(`cards.${post.id}.date`) }}</span>
 					<span class="cards__dot">•</span>
+					<icon-button
+						class="cards__icon cards__icon--alter"
+						icon="shares"
+					></icon-button>
 					<span class="cards__shares">{{ t(`cards.${post.id}.shares`) }}</span>
 				</div>
 				<p class="cards__description">
@@ -56,7 +60,7 @@ const { t } = useI18n();
 		overflow: hidden;
 
 		&::before {
-			content: '';
+			content: "";
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -67,10 +71,11 @@ const { t } = useI18n();
 	}
 
 	&__image {
-		width: 100%; /* или нужная вам ширина */
-		min-height: 320px; /* или нужная вам высота */
+		width: 100%;
+		min-height: 320px;
 		background-position: center;
-		background-size: cover; /* или contain, в зависимости от ваших нужд */
+		background-size: cover;
+		background-image: var(--background-image);
 	}
 
 	&__tags {
@@ -105,11 +110,24 @@ const { t } = useI18n();
 		border-radius: 200px;
 		backdrop-filter: blur(12px);
 		fill: rgba(255, 255, 255, 0.2);
+
+		&--alter {
+			position: relative;
+			top: 0;
+			right: 0;
+			background-color: transparent;
+
+			&::before {
+				width: 18px;
+				height: 18px;
+				background-color: grey;
+			}
+		}
 	}
 
 	&__author {
 		font-weight: 700;
-		font-size: 22px;
+		font-size: 20px;
 		color: #000000;
 	}
 
@@ -120,6 +138,7 @@ const { t } = useI18n();
 	}
 
 	&__meta {
+		position: relative;
 		display: flex;
 		align-items: center;
 		margin-bottom: 12px;
@@ -157,12 +176,12 @@ const { t } = useI18n();
 
 	&__date {
 		font-weight: 400;
-		font-size: 18px;
+		font-size: 16px;
 	}
 
 	&__shares {
 		font-weight: 400;
-		font-size: 18px;
+		font-size: 16px;
 	}
 }
 </style>

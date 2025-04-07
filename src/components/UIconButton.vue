@@ -34,7 +34,7 @@ defineProps({
 	border-radius: 12px;
 	cursor: pointer;
 
-	&::after {
+	&::before {
 		content: '';
 		display: block;
 		mask: var(--icon);

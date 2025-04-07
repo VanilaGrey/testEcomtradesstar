@@ -1,5 +1,5 @@
 <script setup>
-import SocialIcon from './SocialIcon.vue'; // Импортируйте компонент социальных иконок
+import IconButton from './UIconButton.vue';
 </script>
 
 <template>
@@ -11,11 +11,19 @@ import SocialIcon from './SocialIcon.vue'; // Импортируйте комп�
 			</p>
 		</div>
 		<div class="footer__socials">
-			<SocialIcon icon="/images/icons/icon-facebook.svg" count="29" />
-			<SocialIcon icon="/images/icons/icon-twitter.svg" count="29" />
-			<SocialIcon icon="/images/icons/icon-instagram.svg" count="29" />
-			<SocialIcon icon="/images/icons/icon-twitter.svg" count="29" />
-			<SocialIcon icon="/images/icons/icon-youtube.svg" count="29" />
+			<icon-button
+				class="footer__icon"
+				icon="facebook"
+				count="45"
+			></icon-button>
+			<icon-button class="footer__icon" icon="twitter" count="29"></icon-button>
+			<icon-button
+				class="footer__icon"
+				icon="instagram"
+				count="29"
+			></icon-button>
+			<icon-button class="footer__icon" icon="twitter" count="29"></icon-button>
+			<icon-button class="footer__icon" icon="youtube" count="29"></icon-button>
 		</div>
 	</footer>
 </template>
@@ -40,5 +48,17 @@ import SocialIcon from './SocialIcon.vue'; // Импортируйте комп�
 
 .footer__company {
 	margin-left: 15px;
+}
+
+.footer__icon {
+	color: grey;
+}
+
+.footer__icon::before {
+	width: 20px;
+	height: 20px;
+	background-color: grey;
+	mask-position: center;
+	mask-size: auto;
 }
 </style>

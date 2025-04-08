@@ -1,24 +1,28 @@
 <script setup>
-import MenuItem from './HeaderMenu.vue';
-import ButtonItem from './UButton.vue';
-import IconButton from './UIconButton.vue';
+import MenuItem from "./HeaderMenu.vue";
+import ButtonItem from "./UButton.vue";
+import IconButton from "./UIconButton.vue";
+
+import { useI18n } from "vue-i18n";
+const { t } = useI18n();
 </script>
 
 <template>
 	<header class="header">
 		<div class="header__inner">
-			<img
-				class="header__logo"
-				src="/images/logo.png"
-				alt="logo"
-				width="360px"
-				height="49px"
-				href="#"
-			/>
+			<router-link to="/">
+				<img
+					class="header__logo"
+					src="/images/logo.png"
+					alt="logo"
+					width="360"
+					height="49"
+				/>
+			</router-link>
 			<menu-item />
 			<div class="header__right">
 				<icon-button icon="search"></icon-button>
-				<button-item> CALL TO ACTION </button-item>
+				<button-item>{{ t("buttonText") }}</button-item>
 			</div>
 		</div>
 	</header>

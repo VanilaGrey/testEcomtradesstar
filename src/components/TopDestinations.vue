@@ -1,14 +1,13 @@
 <script setup>
 import destinationsItems from "@/data/destinations-items.js";
+import { useI18n } from "vue-i18n";
+const { t } = useI18n();
 </script>
 
 <template>
 	<section class="destinations">
-		<h2 class="destinations__title">Top Destinations</h2>
-		<p class="destinations__subtitle">
-			Tick one more destination off of your bucket list with one of our most
-			popular vacations in 2022
-		</p>
+		<h2 class="destinations__title">{{ t("destinations.title") }}</h2>
+		<p class="destinations__subtitle">{{ t("destinations.subtitle") }}</p>
 		<div class="destinations__list">
 			<div
 				v-for="(destination, index) in destinationsItems"
@@ -16,7 +15,7 @@ import destinationsItems from "@/data/destinations-items.js";
 				class="destinations__card"
 				:style="{ '--background-image': `url(${destination.image})` }"
 			>
-				<span class="destinations__card-title">{{ destination.title }}</span>
+				<span class="destinations__card-title">{{ t(destination.title) }}</span>
 			</div>
 		</div>
 	</section>
@@ -52,8 +51,8 @@ import destinationsItems from "@/data/destinations-items.js";
 		width: auto;
 		min-height: 260px;
 		padding: 10px;
-		color: white;
-		background-color: grey;
+		color: $white;
+		background-color: $grey;
 		background-image: var(--background-image);
 		background-position: center;
 		background-size: cover;
@@ -61,8 +60,9 @@ import destinationsItems from "@/data/destinations-items.js";
 	}
 
 	&__card-title {
+		text-align: center;
 		font-weight: 700;
-		font-style: 24px;
+		font-size: 20px;
 	}
 }
 </style>

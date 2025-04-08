@@ -27,10 +27,10 @@ const { t } = useI18n();
 <style lang="scss" scoped>
 .post-sidebar {
 	&__image {
-		background-image: var(--background-image);
-		background-size: cover;
 		min-width: 144px;
 		min-height: 100px;
+		background-image: var(--background-image);
+		background-size: cover;
 	}
 
 	&__item {
@@ -39,13 +39,13 @@ const { t } = useI18n();
 	}
 
 	&__title {
-		font-weight: bold;
+		font-weight: 700;
 		font-size: 14px;
 	}
 
 	&__date {
 		font-size: 13px;
-		color: gray;
+		color: $grey;
 	}
 }
 </style>

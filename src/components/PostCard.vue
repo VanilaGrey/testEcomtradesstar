@@ -24,7 +24,7 @@ const { t } = useI18n();
 				<h2 class="cards__title">{{ t(`cards.${post.id}.title`) }}</h2>
 				<div class="cards__meta">
 					<span class="cards__author">{{ t(`cards.${post.id}.author`) }}</span>
-					<span class="cards__line">____</span>
+					<span class="cards__line">──</span>
 					<span class="cards__date">{{ t(`cards.${post.id}.date`) }}</span>
 					<span class="cards__dot">•</span>
 					<icon-button
@@ -48,11 +48,12 @@ const { t } = useI18n();
 	grid-template-columns: repeat(3, 1fr);
 	gap: 40px;
 	padding: 0;
+	margin-bottom: 90px;
 
 	&__item {
 		display: flex;
 		flex-direction: column;
-		background-color: #ffffff;
+		background-color: $white;
 	}
 
 	&__wrapper {
@@ -73,9 +74,9 @@ const { t } = useI18n();
 	&__image {
 		width: 100%;
 		min-height: 320px;
+		background-image: var(--background-image);
 		background-position: center;
 		background-size: cover;
-		background-image: var(--background-image);
 	}
 
 	&__tags {
@@ -90,8 +91,8 @@ const { t } = useI18n();
 		padding: 8px 10px;
 		font-weight: 700;
 		font-size: 20px;
-		color: #ffffff;
-		background: rgba(255, 255, 255, 0.2);
+		color: $white;
+		background-color: rgba(255, 255, 255, 0.2);
 		border-radius: 4px;
 		backdrop-filter: blur(12px);
 	}
@@ -120,7 +121,7 @@ const { t } = useI18n();
 			&::before {
 				width: 18px;
 				height: 18px;
-				background-color: grey;
+				background-color: $grey;
 			}
 		}
 	}
@@ -128,7 +129,8 @@ const { t } = useI18n();
 	&__author {
 		font-weight: 700;
 		font-size: 20px;
-		color: #000000;
+		color: $black;
+		text-align: center;
 	}
 
 	&__title {
@@ -142,26 +144,24 @@ const { t } = useI18n();
 		display: flex;
 		align-items: center;
 		margin-bottom: 12px;
-		font-size: 13px;
-		color: #777777;
-		gap: 10px;
+		font-size: 12px;
+		color: $grey;
+		gap: 8px;
 	}
 
 	&__dot {
-		color: #bbbbbb;
+		color: $grey;
 	}
 
 	&__line {
-		position: relative;
-		top: -25%;
-		color: #bbbbbb;
+		color: $white-grey;
 	}
 
 	&__description {
 		flex-grow: 1;
 		margin-bottom: 16px;
 		line-height: 150%;
-		color: #555555;
+		color: $black;
 	}
 
 	&__link {
@@ -169,19 +169,21 @@ const { t } = useI18n();
 		padding-bottom: 5px;
 		font-weight: bold;
 		font-size: 14px;
-		color: #000000;
+		color: $black;
 		text-decoration: none;
-		border-bottom: 1px solid black;
+		border-bottom: 1px solid $black;
 	}
 
 	&__date {
 		font-weight: 400;
 		font-size: 16px;
+		text-align: center;
 	}
 
 	&__shares {
 		font-weight: 400;
 		font-size: 16px;
+		text-align: center;
 	}
 }
 </style>

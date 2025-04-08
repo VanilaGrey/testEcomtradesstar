@@ -31,14 +31,14 @@ defineProps({
 		width: 15px;
 		height: 15px;
 		padding: 1px;
-		background-color: grey;
+		background-color: $grey;
 		border-radius: 50%;
 	}
 
 	&__count {
 		font-weight: 700;
 		font-size: 14px;
-		color: grey;
+		color: $grey;
 	}
 }
 </style>

@@ -1,9 +1,9 @@
 @each $weight in 400, 700 {
 	@font-face {
 		font-weight: $weight;
-		font-family: 'europe';
+		font-family: 'Montserrat';
 		font-style: normal;
-		src: url('/fonts/europe-#{$weight}.woff2') format('woff2');
+		src: url('/fonts/Montserrat-#{$weight}.woff2') format('woff2');
 		font-display: swap;
 	}
 }

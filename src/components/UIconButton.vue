@@ -42,7 +42,7 @@ defineProps({
 		width: 32px;
 		height: 37px;
 		mask-size: 100%;
-		background-color: #ffffff;
+		background-color: $white;
 	}
 }
 </style>

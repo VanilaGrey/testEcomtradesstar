@@ -1,20 +1,21 @@
 <script setup>
-import ButtonItem from './UButton.vue';
+import ButtonItem from "./UButton.vue";
+import { useI18n } from "vue-i18n";
+const { t } = useI18n();
 </script>
 
 <template>
 	<section class="banner">
 		<div class="banner__content">
-			<span class="banner__tag">Travel</span>
+			<span class="banner__tag">{{ t("banner.textTag") }}</span>
 			<h1 class="banner__title">
-				Richird Norton photorealistic rendering as real photos
+				{{ t("banner.title") }}
 			</h1>
 			<p class="banner__text">
-				Progressively incentivize cooperative systems through technically sound
-				functionalities. The credibly productive seamless data.
+				{{ t("banner.description") }}
 			</p>
 			<button-item class="banner__button">
-				Start planning your trip
+				{{ t("banner.textButton") }}
 			</button-item>
 		</div>
 	</section>
@@ -27,8 +28,8 @@ import ButtonItem from './UButton.vue';
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	color: #ffffff;
-	background-image: url('/images/foto-2.jpg');
+	color: $white;
+	background-image: url("/images/foto-2.jpg");
 	background-position: center;
 	background-size: cover;
 
@@ -47,7 +48,7 @@ import ButtonItem from './UButton.vue';
 		padding: 8px 10px;
 		font-weight: 700;
 		font-size: 20px;
-		color: #ffffff;
+		color: $white;
 		background: rgba(255, 255, 255, 0.2);
 		border-radius: 4px;
 		backdrop-filter: blur(12px);
@@ -55,7 +56,7 @@ import ButtonItem from './UButton.vue';
 
 	&__title {
 		margin-bottom: 16px;
-		font-weight: bold;
+		font-weight: 700;
 		font-size: 32px;
 	}
 
@@ -64,15 +65,15 @@ import ButtonItem from './UButton.vue';
 		margin: 0;
 		margin-bottom: 24px;
 		font-size: 16px;
-		color: #dddddd;
+		color: $white-grey;
 	}
 
 	&__button {
 		max-width: 320px;
 		margin-top: 40px;
-		color: #000000;
+		color: $black;
 		text-transform: none;
-		background-color: #ffffff;
+		background-color: $white;
 		border-radius: 2px;
 
 		&:hover {

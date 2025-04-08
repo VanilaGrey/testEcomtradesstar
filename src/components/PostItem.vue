@@ -20,10 +20,10 @@ const { t } = useI18n();
 <style lang="scss" scoped>
 .post-item {
 	&__image {
+		min-width: 270px;
+		height: auto;
 		background-image: var(--background-image);
 		background-size: cover;
-		height: auto;
-		min-width: 270px;
 	}
 
 	&__title {
@@ -35,7 +35,7 @@ const { t } = useI18n();
 	&__date {
 		font-weight: 400;
 		font-size: 12px;
-		color: #121416;
+		color: $black;
 	}
 }
 </style>

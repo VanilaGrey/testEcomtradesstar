@@ -1,6 +1,6 @@
 <script setup>
-import PostSidebar from './PostSidebar.vue';
-import { useI18n } from 'vue-i18n';
+import PostSidebar from "./PostSidebar.vue";
+import { useI18n } from "vue-i18n";
 
 const { t } = useI18n();
 </script>
@@ -32,15 +32,15 @@ const { t } = useI18n();
 <style lang="scss" scoped>
 .featured-post {
 	display: grid;
-	grid-template-columns: 2fr 1.5fr;
+	grid-template-columns: 1.5fr 1fr;
 	padding: 25px 20px;
-	border: 1px solid #d6d6d6;
+	border: 1px solid $grey;
 	gap: 40px;
 
 	&__content {
 		display: flex;
 		flex-direction: column;
-		align-items: self-start;
+		align-items: flex-start;
 	}
 
 	&__sidebar {
@@ -53,7 +53,7 @@ const { t } = useI18n();
 		margin-bottom: 15px;
 		font-weight: 500;
 		font-size: 12px;
-		color: #6e6e6e;
+		color: $grey;
 	}
 
 	&__image {
@@ -71,7 +71,7 @@ const { t } = useI18n();
 		font-weight: 400;
 		font-size: 14px;
 		line-height: 150%;
-		color: #6e6e6e;
+		color: $grey;
 	}
 
 	&__link {
@@ -79,9 +79,9 @@ const { t } = useI18n();
 		padding-bottom: 10px;
 		font-weight: 700;
 		font-size: 16px;
-		color: #121416;
+		color: $black;
 		text-decoration: none;
-		border-bottom: 1px solid black;
+		border-bottom: 1px solid $black;
 	}
 }
 </style>

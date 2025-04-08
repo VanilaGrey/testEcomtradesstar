@@ -1,5 +1,6 @@
 <script setup>
-import IconButton from './UIconButton.vue';
+import IconButton from "./UIconButton.vue";
+import footerItems from "@/data/footer-items.js";
 </script>
 
 <template>
@@ -12,28 +13,12 @@ import IconButton from './UIconButton.vue';
 		</div>
 		<div class="footer__socials">
 			<icon-button
+				v-for="(item, index) in footerItems"
+				:key="index"
 				class="footer__icon"
-				icon="facebook"
-				:count="29"
-			></icon-button>
-			<icon-button
-				class="footer__icon"
-				icon="twitter"
-				:count="'70К'"
-			></icon-button>
-			<icon-button class="footer__icon" icon="instagram" :count="40"
-				><span>29</span></icon-button
-			>
-			<icon-button
-				class="footer__icon"
-				icon="twitter"
-				:count="'13К'"
-			></icon-button>
-			<icon-button
-				class="footer__icon"
-				icon="youtube"
-				:count="'168К'"
-			></icon-button>
+				:icon="item.icon"
+				:count="item.count"
+			/>
 		</div>
 	</footer>
 </template>
@@ -43,8 +28,8 @@ import IconButton from './UIconButton.vue';
 	display: flex;
 	justify-content: space-between;
 	padding: 40px;
-	color: white;
-	background: #111111;
+	color: $white;
+	background: $black;
 
 	&__socials {
 		display: flex;
@@ -60,12 +45,17 @@ import IconButton from './UIconButton.vue';
 	}
 
 	&__icon {
-		color: grey;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 5px;
+		color: $grey;
+		min-height: 50px;
 
 		&::before {
 			width: 20px;
 			height: 20px;
-			background-color: grey;
+			background-color: $grey;
 			mask-position: center;
 			mask-size: auto;
 		}

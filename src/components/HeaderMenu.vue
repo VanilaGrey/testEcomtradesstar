@@ -1,5 +1,5 @@
 <script setup>
-import menuItems from '@/data/menu-items.js';
+import menuItems from "@/data/menu-items.js";
 </script>
 <template>
 	<nav class="menu">
@@ -27,7 +27,7 @@ import menuItems from '@/data/menu-items.js';
 
 	&__link {
 		font-weight: 700;
-		color: #ffffff;
+		color: $white;
 		text-decoration: none;
 	}
 }

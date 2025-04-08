@@ -10,7 +10,7 @@ const { t } = useI18n();
 	<section class="manga-reads">
 		<h3 class="manga-reads__title">{{ t("mangaReads.title") }}</h3>
 		<div class="manga-reads__list">
-			<PostItem
+			<post-item
 				v-for="(post, index) in mangaItems"
 				:key="index"
 				:post="post"
@@ -22,9 +22,9 @@ const { t } = useI18n();
 
 <style lang="scss" scoped>
 .manga-reads {
-	padding: 15px 40px 30px;
-	border: 1px solid #d6d6d6;
 	max-width: 700px;
+	padding: 15px 40px 30px;
+	border: 1px solid grey;
 
 	&__list {
 		display: flex;

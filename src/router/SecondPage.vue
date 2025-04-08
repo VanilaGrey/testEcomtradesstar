@@ -5,14 +5,14 @@ import FirstscreenPage from "../components/FirstscreenPage.vue";
 
 <template>
 	<main class="main">
-		<FirstscreenPage
+		<firstscreen-page
 			layout="second"
 			:showButton="false"
 			backgroundImage="../images/foto-8.jpg"
 			:showMeta="true"
 			:showBreadcrumb="true"
 		>
-		</FirstscreenPage>
+		</firstscreen-page>
 		<div class="container">
 			<product-description />
 		</div>

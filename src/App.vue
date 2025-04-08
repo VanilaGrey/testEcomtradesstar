@@ -17,10 +17,10 @@
 </template>
 
 <script setup>
-import { useI18n } from 'vue-i18n';
-import { RouterView } from 'vue-router';
-import BaseHeader from './components/BaseHeader.vue';
-import BaseFooter from './components/BaseFooter.vue';
+import { useI18n } from "vue-i18n";
+import { RouterView } from "vue-router";
+import BaseHeader from "./components/BaseHeader.vue";
+import BaseFooter from "./components/BaseFooter.vue";
 
 const { locale, availableLocales } = useI18n();
 </script>
@@ -38,6 +38,8 @@ const { locale, availableLocales } = useI18n();
 }
 
 .page__lang-switcher {
+	position: fixed;
+	z-index: 5;
 	display: flex;
 	justify-content: flex-end;
 	padding: 1rem;
@@ -45,8 +47,8 @@ const { locale, availableLocales } = useI18n();
 
 	button {
 		padding: 0.4rem 0.8rem;
-		background-color: white;
-		border: 1px solid #cccccc;
+		background-color: $white;
+		border: 1px solid $grey;
 		border-radius: 4px;
 		cursor: pointer;
 

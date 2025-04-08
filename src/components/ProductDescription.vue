@@ -1,25 +1,23 @@
+<script setup>
+import IconButton from "./UIconButton.vue";
+import productItems from "@/data/page-product.js";
+import { useI18n } from "vue-i18n";
+const { t } = useI18n();
+</script>
+
 <template>
 	<section class="product">
 		<aside class="product__stats">
-			<div class="product__stat">
-				<span class="product__icon">📊</span>
-				<span class="product__value">1.6K</span>
-				<span class="product__label">{{ t("product.stats.views") }}</span>
-			</div>
-			<div class="product__stat">
-				<span class="product__icon">🔗</span>
-				<span class="product__value">996K</span>
-				<span class="product__label">{{ t("product.stats.shares") }}</span>
-			</div>
-			<div class="product__stat">
-				<span class="product__icon">📌</span>
-				<span class="product__value product__link"
-					>{{ t("product.stats.from") }} $321</span
-				>
-			</div>
-			<div class="product__socials">
-				<span class="product__social">📘 125</span>
-				<span class="product__social">🐦 425</span>
+			<div
+				class="product__stat"
+				v-for="(product, index) in productItems"
+				:key="index"
+			>
+				<icon-button class="product__icon" :icon="product.icon" />
+				<span class="product__value">{{ product.value }}</span>
+				<span class="product__label" v-if="product.label">{{
+					t(product.label)
+				}}</span>
 			</div>
 		</aside>
 
@@ -49,28 +47,22 @@
 	</section>
 </template>
 
-<script setup>
-import { useI18n } from 'vue-i18n';
-const { t } = useI18n();
-</script>
-
 <style lang="scss" scoped>
 .product {
 	display: flex;
 	flex-direction: row;
-	padding: 2rem;
-	line-height: 1.6;
-	font-family: 'Helvetica Neue', sans-serif;
-	color: #222222;
-	gap: 2rem;
+	padding: 70px;
+	font-family: "Helvetica Neue", sans-serif;
+	color: $black;
+	gap: 70px;
 
 	&__stats {
 		display: flex;
 		flex-direction: column;
 		min-width: 100px;
-		font-size: 0.85rem;
-		color: #666666;
-		gap: 1rem;
+		font-size: 16px;
+		color: $grey;
+		gap: 10px;
 	}
 
 	&__stat {
@@ -80,68 +72,65 @@ const { t } = useI18n();
 	}
 
 	&__icon {
-		font-size: 1.2rem;
+		&::before {
+			background-color: $black;
+			width: 20px;
+			height: 20px;
+		}
 	}
 
 	&__value {
-		font-weight: bold;
+		font-weight: 700;
 	}
 
 	&__label {
-		font-size: 0.75rem;
-		color: #999999;
-	}
-
-	&__link {
-		font-weight: 600;
-		color: #0070f3;
-		cursor: pointer;
-	}
-
-	&__socials {
-		display: flex;
-		flex-direction: column;
-		gap: 0.25rem;
-		font-size: 0.85rem;
-	}
-
-	&__social {
-		display: flex;
-		align-items: center;
-		gap: 0.25rem;
-	}
-
-	&__content {
-		max-width: 700px;
+		font-size: 16px;
+		color: $grey;
 	}
 
 	&__paragraph {
-		margin-bottom: 1rem;
-		font-size: 1rem;
+		font-weight: 400;
+		font-size: 18px;
+		margin-bottom: 24px;
+		line-height: 183%;
 	}
 
 	&__quote {
-		margin: 2rem 0 1.5rem;
-		padding-left: 1.2rem;
-		font-weight: bold;
-		font-size: 1.3rem;
-		line-height: 1.5;
-		border-left: 5px solid #cccccc;
+		position: relative;
+		font-weight: 700;
+		font-size: 48px;
+		margin: 80px 20px 40px 0;
+		padding-left: 80px;
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: 20px;
+			left: 0;
+			display: block;
+			mask-image: var(--icon-quotes);
+			mask-repeat: no-repeat;
+			mask-size: 100%;
+			background-color: grey;
+			width: 42px;
+			height: 42px;
+		}
 	}
 
 	&__section {
-		margin-top: 2rem;
+		margin-top: 80px;
 	}
 
 	&__title {
-		margin-bottom: 0.5rem;
 		font-weight: 700;
-		font-size: 1.1rem;
+		font-size: 48px;
+		margin-bottom: 24px;
 	}
 
 	&__list {
-		padding-left: 1.5rem;
+		padding-left: 40px;
 		list-style: disc;
+		margin: 24px;
 	}
 
 	&__list-item {

@@ -1,6 +1,8 @@
 <script setup>
 import { defineProps, computed } from "vue";
 import ButtonItem from "./UButton.vue";
+import { useI18n } from "vue-i18n";
+const { t } = useI18n();
 
 const props = defineProps({
 	showButton: {
@@ -40,16 +42,34 @@ h
 	>
 		<div :class="['firstscreen__text', layoutClass]">
 			<div class="firstscreen__breadcrumb" v-if="props.showBreadcrumb">
-				Home &gt; Growth &gt;
-				<strong>5 Efficient Rules How to Organize Your Working Place</strong>
+				{{ t("firstscreen.breadcrumb") }} &nbsp; &gt; &nbsp;
+				{{ t("firstscreen.breadcrumb1") }} &nbsp; &gt; &nbsp;
+				<strong>{{ t("firstscreen.activebBeadcrumb") }}</strong>
 			</div>
-			<p class="firstscreen__label">Inspiration for travel by real people</p>
-			<span class="firstscreen__discription">Book smart, travel simple</span>
-			<button-item v-if="props.showButton" class="firstscreen__button">
-				Start planning your trip
-			</button-item>
+			<p class="firstscreen__label">
+				{{ t("firstscreen.label") }}
+			</p>
+			<span class="firstscreen__discription">{{
+				t("firstscreen.discription")
+			}}</span>
+
+			<button-item v-if="props.showButton" class="firstscreen__button">{{
+				t("firstscreen.buttonText")
+			}}</button-item>
+
 			<span class="firstscreen__meta" v-if="props.showMeta">
-				by Joanna Wellick · 2 minute read · 1.6K views · 1.2K shares
+				{{ t("firstscreen.author") }} <span>──</span>
+				<span class="firstscreen__icon firstscreen__icon--watch">
+					2 {{ t("firstscreen.time") }} <span>──</span>
+				</span>
+				<span class="firstscreen__icon firstscreen__icon--graphs">
+					1.6K {{ t("firstscreen.shares") }} <span>──</span>
+				</span>
+				<span class="firstscreen__icon firstscreen__icon--facebook-1"> </span>
+				<span class="firstscreen__icon firstscreen__icon--twitter"> </span>
+				<span class="firstscreen__icon firstscreen__icon--pinterest">
+					1.2K {{ t("firstscreen.views") }}
+				</span>
 			</span>
 		</div>
 	</div>
@@ -59,9 +79,9 @@ h
 .firstscreen {
 	position: relative;
 	margin-bottom: 20px;
+	background-image: var(--background-image);
 	background-position: center;
 	background-size: cover;
-	background-image: var(--background-image);
 
 	&__text--default {
 		display: flex;
@@ -87,30 +107,33 @@ h
 		margin: 0;
 		font-weight: 700;
 		font-size: 64px;
-		color: #ffffff;
+		color: $white;
 		text-transform: uppercase;
 	}
 
 	&__discription {
 		font-size: 36px;
-		color: #ffffff;
+		color: $white;
 	}
 
 	&__button {
 		max-width: 320px;
 		margin-top: 40px;
-		color: #000000;
+		color: $black;
 		text-transform: none;
-		background-color: #ffffff;
+		background-color: $white;
 		border-radius: 2px;
 	}
 
 	&__meta {
-		padding: 20px;
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		padding: 20px 0;
 		font-size: 14px;
 		text-align: center;
-		color: #ffffff;
-		text-shadow: 0 0 3px #000000;
+		color: $white;
+		text-shadow: 0 0 3px;
 	}
 
 	&::before {
@@ -130,8 +153,46 @@ h
 		left: 10px;
 		padding: 20px 30px;
 		font-size: 14px;
-		color: #ffffff;
-		text-shadow: 0 0 3px #000000;
+		color: $white;
+		text-shadow: 0 0 3px $black;
+	}
+
+	&__icon {
+		display: inline-flex;
+		align-items: center;
+		gap: 8px;
+		position: relative;
+		font-size: 14px;
+
+		&::before {
+			content: "";
+			position: relative;
+
+			width: 32px;
+			height: 32px;
+			background-color: currentColor;
+			-webkit-mask-repeat: no-repeat;
+			mask-repeat: no-repeat;
+			-webkit-mask-size: auto;
+			mask-size: auto;
+			-webkit-mask-position: center;
+			mask-position: center;
+		}
+		&--watch::before {
+			mask-image: var(--icon-watch);
+		}
+		&--graphs::before {
+			mask-image: var(--icon-graphs);
+		}
+		&--pinterest::before {
+			mask-image: var(--icon-pinterest);
+		}
+		&--twitter::before {
+			mask-image: var(--icon-twitter);
+		}
+		&--facebook-1::before {
+			mask-image: var(--icon-facebook-1);
+		}
 	}
 }
 </style>

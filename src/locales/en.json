@@ -1,23 +1,36 @@
 {
+	"buttonText": "CALL TO ACTION",
+	"destinations": {
+		"title": "Top Destinations",
+		"subtitle": "Tick one more destination off of your bucket list with one of our most popular vacations in 2022",
+		"destinationsCard": {
+			"title": "Dominican Republic",
+			"title1": "Maecenas Tincidunt"
+		}
+	},
 	"product": {
 		"stats": {
 			"views": "views",
 			"shares": "shares",
 			"from": "From"
 		},
-		"p1": "Structured gripped tape invisible moulded cups for support firm hold...",
-		"p2": "Striking pewter studded epaulettes silver zips inner drawstring waist...",
+		"icon": "graphs",
+		"icon1": "pinterest",
+		"icon2": "shares",
+		"icon3": "facebook",
+		"p1": "Structured gripped tape invisible moulded cups for support firm hold strong powermesh front liner sport detail. Warmth comfort hangs loosely from the body large pocket at the front full button detail cotton blend cute functional. Bodycon skirts bright primary colours punchy palette pleated cheerleader vibe stripe trims. Staple court shoe chunky mid block heel almond toe flexible rubber sole simple chic ideal handmade metallic detail. Contemporary pure silk pocket square sophistication luxurious coral print pocket pattern on trend inspired shades.",
+		"p2": "Striking pewter studded epaulettes silver zips inner drawstring waist channel urban edge single-breasted jacket. Engraved attention to detail elegant with neutral colours scheme quartz leather strap fastens with a pin a buckle clasp. Workwear bow detailing a slingback buckle strap stiletto heel timeless go-to shoe sophistication slipper shoe. Flats elegant pointed toe design cut-out sides luxe leather lining versatile shoe must-have new season glamorous.",
 		"quote": "KNICKER LINING CONCEALED BACK ZIP FASTEN SWING STYLE HIGH WAISTED DOUBLE LAYER FULL PATTERN FLORAL.",
-		"p3": "Foam padding in the insoles leather finest quality staple flat slip-on...",
-		"p4": "Eget aenean tellus venenatis. Donec odio tempus. Felis arcu pretium...",
+		"p3": "Foam padding in the insoles leather finest quality staple flat slip-on design pointed toe off-duty shoe. Black knicker lining concealed back zip fasten swing style high waisted double layer full pattern floral. Polished finish elegant court shoe work duty stretchy slingback strap mid kitten heel this ladylike design",
+		"p4": "Eget aenean tellus venenatis. Donec odio tempus. Felis arcu pretium metus nullam quam aenean sociis quis sem neque vici libero. Venenatis nullam fringilla pretium magnis aliquam nunc vulputate integer augue ultricies cras. Eget viverra feugiat cras ut. Sit natoque montes tempus ligula eget vitae pede rhoncus maecenas consectetuer commodo condimentum aenean.",
 		"sectionTitle": "EU RIDICULUS FRINGILLA AENEAN",
-		"p5": "Sociis consequat adipiscing sit curabitur donec sem luctus cras natoque...",
+		"p5": "Sociis consequat adipiscing sit curabitur donec sem luctus cras natoque vulputate dolor eget dapibus. Nec vitae eros ullamcorper laoreet dapibus mus ac ante viverra. A aenean sit augue curabitur et parturient nisi sed enim. Nulla nec quis sit quisque sem commodo ultricies neque. Lorem eget venenatis dui ante luctus ultricies tellus montes. Quis in sapien tempus.",
 		"list": [
 			"Crisp fresh iconic elegant timeless clean perfume",
 			"Neck straight sharp silhouette and dart detail",
 			"Machine wash cold slim fit premium stretch selvedge denim comfortable low waist"
 		],
-		"p6": "See-through delicate embroidered organza blue lining luxury acetate-mix stretch..."
+		"p6": "See-through delicate embroidered organza blue lining luxury acetate-mix stretch pleat detailing. Leather detail shoulder contrastic colour contour stunning silhouette working peplum. Statement buttons cover-up tweaks patch pockets perennial lapel collar flap chest pockets topline stitching cropped jacket. Effortless comfortable full leather lining eye-catching unique detail to the toe low 'cut-away' sides clean and sleek. Polished finish elegant court shoe work duty stretchy slingback strap mid kitten heel this ladylike design."
 	},
 	"posts": {
 		"post1": {
@@ -68,6 +81,12 @@
 		"family": "Family",
 		"lifestyle": "Lifestyle"
 	},
+	"banner": {
+		"title": "Richird Norton photorealistic rendering as real photos",
+		"textTag": "Travel",
+		"description": "Progressively incentivize cooperative systems through technically sound functionalities. The credibly productive seamless data.",
+		"textButton": "Start planning your trip"
+	},
 	"cards": {
 		"post1": {
 			"title": "Integer Maecenas Eget Viverra",
@@ -96,5 +115,17 @@
 			"tags1": "Aenean Eleifend",
 			"tags2": "Aliquam"
 		}
+	},
+	"firstscreen": {
+		"buttonText": " Start planning your trip",
+		"breadcrumb": "Home",
+		"breadcrumb1": "Growth",
+		"activebBeadcrumb": "5 Efficient Rules How to Organize Your Working Place",
+		"label": "Inspiration for travel by real people",
+		"discription": "Book smart, travel simple",
+		"author": "by Joanna Wellick",
+		"time": "minute read",
+		"views": "views",
+		"shares": "shares"
 	}
 }

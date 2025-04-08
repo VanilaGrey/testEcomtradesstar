@@ -30,16 +30,17 @@ import IconButton from "./UIconButton.vue";
 		align-items: center;
 		gap: 6px;
 		font-size: 14px;
-		color: #000000;
+		color: $black;
 	}
 
 	&__icon {
 		width: 30px;
 		height: 25px;
+
 		&::before {
 			width: 25px;
 			height: 18px;
-			background-color: black;
+			background-color: $black;
 			mask-size: auto;
 		}
 	}

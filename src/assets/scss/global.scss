@@ -2,7 +2,7 @@ html {
 	font-weight: 400;
 	font-size: 20px;
 	line-height: 1.2;
-	font-family: 'Europe', sans-serif;
+	font-family: "Montserrat", sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	text-rendering: optimizeLegibility;
@@ -12,15 +12,19 @@ html {
 body {
 	margin: 0;
 
-	--icon-search: url('../icons/icon-search.svg');
-	--icon-facebook: url('../icons/icon-facebook.svg');
-	--icon-twitter: url('../icons/icon-twitter.svg');
-	--icon-instagram: url('../icons/icon-instagram.svg');
-	--icon-youtube: url('../icons/icon-youtube.svg');
-	--icon-picture: url('../icons/icon-picture.svg');
-	--icon-play: url('../icons/icon-play.svg');
-	--icon-shares: url('../icons/icon-shares.svg');
-
+	--icon-search: url("../icons/icon-search.svg");
+	--icon-facebook: url("../icons/icon-facebook.svg");
+	--icon-twitter: url("../icons/icon-twitter.svg");
+	--icon-instagram: url("../icons/icon-instagram.svg");
+	--icon-youtube: url("../icons/icon-youtube.svg");
+	--icon-picture: url("../icons/icon-picture.svg");
+	--icon-play: url("../icons/icon-play.svg");
+	--icon-facebook-1: url("../icons/icon-facebook-1.svg");
+	--icon-graphs: url("../icons/icon-graphs.svg");
+	--icon-pinterest: url("../icons/icon-pinterest.svg");
+	--icon-quotes: url("../icons/icon-quotes.svg");
+	--icon-watch: url("../icons/icon-watch.svg");
+	--icon-shares: url("../icons/icon-shares.svg");
 }
 
 .visually-hidden {

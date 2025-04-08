@@ -1,0 +1,131 @@
+{
+	"buttonText": "LLAMADO A LA ACCIÓN",
+	"destinations": {
+		"title": "Destinos Principales",
+		"subtitle": "Marca otro destino de tu lista de deseos con una de nuestras vacaciones más populares en 2022",
+		"destinationsCard": {
+			"title": "República Dominicana",
+			"title1": "Maecenas Tincidunt"
+		}
+	},
+	"product": {
+		"stats": {
+			"views": "vistas",
+			"shares": "compartidos",
+			"from": "De"
+		},
+		"icon": "gráficos",
+		"icon1": "pinterest",
+		"icon2": "compartidos",
+		"icon3": "facebook",
+		"p1": "Cinta estructurada con detalles de agarre, copas moldeadas invisibles para soporte, firme sujeción, forro frontal de powermesh. Calidez y comodidad que cuelga libremente del cuerpo, gran bolsillo al frente, detalles de botones completos, mezcla de algodón, linda y funcional. Faldas bodycon con colores brillantes y primarios, paleta llamativa, plisados, vibra de animadora, detalles de rayas. Zapatos clásicos de cancha con tacón medio bloqueado, puntera almendrada, suela de goma flexible, simple y elegante, ideal para hechos a mano, detalles metálicos. Cuadrado de bolsillo de seda pura contemporánea, sofisticación, lujoso patrón de coral, inspiración en tendencias.",
+		"p2": "Epaulettes con tachuelas de estaño llamativos, cremalleras plateadas, cinturilla interna con cordón, chaqueta de un solo pecho de estilo urbano. Atención al detalle grabada, elegante con esquema de colores neutros, correa de cuero con cierre de pin y hebilla. Detalles de moño en el trabajo, correa de tobillo con tacón de aguja, zapato clásico y sofisticado. Zapatos elegantes con diseño de punta afilada, recortes laterales, lujoso forro de cuero, zapato versátil, esencial para la nueva temporada, glamurosa.",
+		"quote": "FORRO DE BRAGAS CON CIERRE DE CREMALLERA OCULTO EN LA ESPALDA, ESTILO SWING DE CINTURA ALTA, DOBLE CAPA CON PATRÓN COMPLETO FLOREAL.",
+		"p3": "Relleno de espuma en las plantillas, cuero de la más alta calidad, diseño básico de zapatos planos con punta afilada, calzado de descanso. Forro negro de braguitas, cremallera oculta en la espalda, estilo swing de cintura alta, doble capa con patrón completo de flores. Acabado pulido, elegante zapato de corte, trabajo, correa elástica en la parte posterior del talón, tacón medio de gatito, diseño femenino.",
+		"p4": "Eget aenean tellus venenatis. Donec odio tempus. Felis arcu pretium metus nullam quam aenean sociis quis sem neque vici libero. Venenatis nullam fringilla pretium magnis aliquam nunc vulputate integer augue ultricies cras. Eget viverra feugiat cras ut. Sit natoque montes tempus ligula eget vitae pede rhoncus maecenas consectetuer commodo condimentum aenean.",
+		"sectionTitle": "EU RIDICULUS FRINGILLA AENEAN",
+		"p5": "Sociis consequat adipiscing sit curabitur donec sem luctus cras natoque vulputate dolor eget dapibus. Nec vitae eros ullamcorper laoreet dapibus mus ac ante viverra. A aenean sit augue curabitur et parturient nisi sed enim. Nulla nec quis sit quisque sem commodo ultricies neque. Lorem eget venenatis dui ante luctus ultricies tellus montes. Quis in sapien tempus.",
+		"list": [
+			"Perfume limpio, icónico, fresco, elegante, atemporal",
+			"Cuello recto, silueta afilada y detalles de dardo",
+			"Lavado a máquina en frío, ajuste slim fit, denim premium elástico de calidad, cómodo, bajo cintura"
+		],
+		"p6": "Organza delicada y transparente con bordado, forro azul, mezcla de acetato de lujo, detalles de pliegues elásticos. Detalles de cuero en el hombro, contorno de color contrastante, silueta impresionante con peplum. Botones de declaración, ajustes, bolsillos parche, solapas de cuello perenne, costura superior, chaqueta recortada. Acabado pulido, elegante zapato de corte, trabajo, correa elástica en el talón, tacón medio de gatito, diseño femenino."
+	},
+	"posts": {
+		"post1": {
+			"title": "Akame Ga Kill: Final de temporada",
+			"date": "21 de marzo de 2021"
+		},
+		"post2": {
+			"title": "Naruto Uzumaki: Aldea Oculta",
+			"date": "21 de marzo de 2021"
+		},
+		"post3": {
+			"title": "Estreno de Love Juice",
+			"date": "21 de marzo de 2021"
+		},
+		"post4": {
+			"title": "Estreno de Love Juice",
+			"date": "21 de marzo de 2021"
+		}
+	},
+	"mangaReads": {
+		"title": "Lecturas de manga",
+		"manga1": {
+			"title": "Tacha un destino más de tu lista de deseos con unas de nuestras vacaciones más populares en 2022",
+			"date": "21 de marzo de 2021"
+		},
+		"manga2": {
+			"title": "Tacha un destino más de tu lista de deseos con unas de nuestras vacaciones más populares en 2022",
+			"date": "21 de marzo de 2021"
+		},
+		"manga3": {
+			"title": "Tacha un destino más de tu lista de deseos con unas de nuestras vacaciones más populares en 2022",
+			"date": "21 de marzo de 2021"
+		}
+	},
+	"bigPost": {
+		"featured": {
+			"date": "Hace 1 mes",
+			"title": "Tacha un destino más de tu lista de deseos con unas de nuestras vacaciones más populares en 2022",
+			"description": "Phasellus aliquet nibh in iaculis pharetra. Maecenas eleifend sed ex. Donec quis magna sed felis elementum blandit nec quis sem. Maecen.",
+			"viewPost": "Ver publicación"
+		}
+	},
+	"menu": {
+		"destinations": "Destinos",
+		"food": "Comida",
+		"wellBeing": "Bienestar",
+		"sport": "Deporte",
+		"family": "Familia",
+		"lifestyle": "Estilo de vida"
+	},
+	"banner": {
+		"title": "Renderizado fotorrealista de Richard Norton como fotos reales",
+		"textTag": "Viaje",
+		"description": "Incentivar progresivamente los sistemas cooperativos mediante funcionalidades técnicamente sólidas. Datos sin fisuras, productivos y creíbles.",
+		"textButton": "Comienza a planificar tu viaje"
+	},
+	"cards": {
+		"post1": {
+			"title": "Integer Maecenas Eget Viverra",
+			"author": "Joanna Wellick",
+			"date": "28 de junio de 2018",
+			"description": "Aenean eleifend ante maecenas pulvinar montes lorem et pede dis dolor pretium donec dictum. Vici consequat justo enim. Venenatis eget adipiscing luctus lorem.",
+			"shares": "1K compartidos",
+			"tags1": "Aenean Eleifend",
+			"tags2": "Aliquam"
+		},
+		"post2": {
+			"title": "Aenean eleifend ante maecenas",
+			"author": "Joanna Wellick",
+			"date": "28 de junio de 2018",
+			"description": "Aenean eleifend ante maecenas pulvinar montes lorem et pede dis dolor pretium donec dictum. Vici consequat justo enim. Venenatis eget adipiscing luctus lorem.",
+			"shares": "1K compartidos",
+			"tags1": "Aenean Eleifend",
+			"tags2": "Aliquam"
+		},
+		"post3": {
+			"title": "Integer Maecenas Eget Viverra",
+			"author": "Joanna Wellick",
+			"date": "28 de junio de 2018",
+			"description": "Aenean eleifend ante maecenas pulvinar montes lorem et pede dis dolor pretium donec dictum. Vici consequat justo enim. Venenatis eget adipiscing luctus lorem.",
+			"shares": "1K compartidos",
+			"tags1": "Aenean Eleifend",
+			"tags2": "Aliquam"
+		}
+	},
+	"firstscreen": {
+		"buttonText": "Comienza a planificar tu viaje",
+		"breadcrumb": "Inicio",
+		"breadcrumb1": "Crecimiento",
+		"activebBeadcrumb": "5 reglas eficientes sobre cómo organizar tu lugar de trabajo",
+		"label": "Inspiración para viajar por personas reales",
+		"discription": "Reserva inteligente, viaja simple",
+		"author": "por Joanna Wellick",
+		"time": "minuto de lectura",
+		"views": "vistas",
+		"shares": "compartidos"
+	}
+}
